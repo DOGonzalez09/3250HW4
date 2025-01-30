@@ -1,4 +1,4 @@
-/*
+package src;/*
 David Gonzalez
 Homework 4
 This program creates news Feed that will pass the feed into social media platforms who will alert the media's users who are subscribed
@@ -37,7 +37,7 @@ class NewsFeed {
     }
 
     public Feed getRandomFeed(){
-        int i = (int) (Math.random()*(_newsFeed.size()-1));
+        int i = (int) (Math.random()*(_newsFeed.size()));
         return _newsFeed.get(i);
     }
 
@@ -316,7 +316,7 @@ public class Main {
 
 
         // Run a simulation to generate random feeds for the SMPs
-        int runTime = 2000;
+        int runTime = 20;
         for(int i=0; i<runTime; i++){
             for (SocialMediaPlatform platform : platforms) {
                 platform.generateFeed(nf);
